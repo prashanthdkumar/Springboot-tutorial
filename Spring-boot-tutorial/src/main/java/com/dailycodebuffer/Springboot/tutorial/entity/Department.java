@@ -12,7 +12,7 @@ public class Department {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long departmentId;
     private String departmentName;
-    private String departmetnAddress;
+    private String departmentAddress;
     private String departmentCode;
     
     public Long getDepartmentId() {
@@ -31,12 +31,12 @@ public class Department {
         this.departmentName = departmentName;
     }
     
-    public String getDepartmetnAddress() {
-        return departmetnAddress;
+    public String getDepartmentAddress() {
+        return departmentAddress;
     }
     
-    public void setDepartmetnAddress(String departmetnAddress) {
-        this.departmetnAddress = departmetnAddress;
+    public void setDepartmentAddress(String departmentAddress) {
+        this.departmentAddress = departmentAddress;
     }
     
     public String getDepartmentCode() {
@@ -47,10 +47,10 @@ public class Department {
         this.departmentCode = departmentCode;
     }
     
-    public Department(Long departmentId, String departmentName, String departmetnAddress, String departmentCode) {
+    public Department(Long departmentId, String departmentName, String departmentAddress, String departmentCode) {
         this.departmentId = departmentId;
         this.departmentName = departmentName;
-        this.departmetnAddress = departmetnAddress;
+        this.departmentAddress = departmentAddress;
         this.departmentCode = departmentCode;
     }
     
@@ -62,7 +62,7 @@ public class Department {
         return "Department{" +
             "departmentId=" + departmentId +
             ", departmentName='" + departmentName + '\'' +
-            ", departmetnAddress='" + departmetnAddress + '\'' +
+            ", departmentAddress='" + departmentAddress + '\'' +
             ", departmentCode='" + departmentCode + '\'' +
             '}';
     }
