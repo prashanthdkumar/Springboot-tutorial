@@ -45,4 +45,11 @@ public class DepartmentController {
                                        @RequestBody Department department) {
         return departmentService.updateDepartment(departmentId, department);
     }
+    
+    // Documentation for other Query methods supported by Spring Data JPA
+    // https://docs.spring.io/spring-data/jpa/docs/current/reference/html/#jpa.query-methods
+    @GetMapping("/departments/name/{name}")
+    public Department fetchDepartmentByName(@PathVariable("name") String departmentName) {
+        return departmentService.fetchDepartmentByName(departmentName);
+    }
 }
