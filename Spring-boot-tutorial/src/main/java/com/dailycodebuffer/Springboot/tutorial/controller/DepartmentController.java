@@ -27,4 +27,9 @@ public class DepartmentController {
         return departmentService.fetchDepartmentList();
     }
     
+    @GetMapping("/departments/{id}")
+    public Department fetchDepartmentById(@PathVariable("id") Long departmentId) {
+        return departmentService.fetchDepartmentById(departmentId);
+    }
+    
 }
