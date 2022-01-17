@@ -1,7 +1,9 @@
 package com.dailycodebuffer.Springboot.tutorial.service;
 
-import org.springframework.stereotype.Service;
+import com.dailycodebuffer.Springboot.tutorial.entity.Department;
 
-@Service
 public interface DepartmentService {
+    
+    public Department saveDepartment(Department department);
+    
 }
