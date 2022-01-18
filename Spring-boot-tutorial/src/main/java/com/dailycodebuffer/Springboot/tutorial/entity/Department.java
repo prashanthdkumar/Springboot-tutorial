@@ -1,9 +1,22 @@
 package com.dailycodebuffer.Springboot.tutorial.entity;
 
+import org.hibernate.validator.constraints.Length;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.validation.constraints.Email;
+import javax.validation.constraints.Future;
+import javax.validation.constraints.FutureOrPresent;
+import javax.validation.constraints.Negative;
+import javax.validation.constraints.NegativeOrZero;
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.Past;
+import javax.validation.constraints.PastOrPresent;
+import javax.validation.constraints.Positive;
+import javax.validation.constraints.PositiveOrZero;
+import javax.validation.constraints.Size;
 
 @Entity
 public class Department {
@@ -11,6 +24,19 @@ public class Department {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long departmentId;
+    
+    @NotBlank(message = "Please Add Department Name.")
+    /*@Length(max = 5, min = 2)
+    @Size(min = 0, max = 10)
+    @Email
+    @Positive
+    @Negative
+    @PositiveOrZero
+    @NegativeOrZero
+    @Future
+    @FutureOrPresent
+    @Past
+    @PastOrPresent*/
     private String departmentName;
     private String departmentAddress;
     private String departmentCode;
@@ -49,7 +75,7 @@ public class Department {
     
     public Department(Long departmentId, String departmentName, String departmentAddress, String departmentCode) {
         this.departmentId = departmentId;
-        this.departmentName = departmentName;
+       this.departmentName = departmentName;
         this.departmentAddress = departmentAddress;
         this.departmentCode = departmentCode;
     }
